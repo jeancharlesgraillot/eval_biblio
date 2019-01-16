@@ -46,12 +46,17 @@ class ImageManager
 	 *
 	 * @param Image $image
 	 */
-	public function add(Image $image)
+	public function addImage(Image $image)
 	{
 		$query = $this->getDb()->prepare('INSERT INTO images(source, alt) VALUES (:source, :alt)');
 		$query->bindValue("source", $image->getSource(), PDO::PARAM_STR);
         $query->bindValue("alt", $image->getAlt(), PDO::PARAM_STR);
 		$query->execute();
+
+		// $dataCharacter is an associative array which contains informations of a user
+        $id = $this->getDb()->lastInsertId();
+        // We create a new User object with the associative array $dataCharacter and we return it
+        return $id;
 	}
-    
+
 }

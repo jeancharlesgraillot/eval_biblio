@@ -27,7 +27,7 @@
                   if ($book->getImage_id() == $image->getId_image() ) {
                ?>
                
-               <img class="card-img-top" src="<?php echo $image->getSource(); ?>" alt="<?php echo $image->getAlt(); ?>">
+               <img class="card-img-top" src="../assets/img/<?php echo $image->getSource(); ?>" alt="<?php echo $image->getAlt(); ?>">
             
             <?php
                   }

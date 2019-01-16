@@ -64,4 +64,21 @@ class CategoryManager
 		return $arrayOfCategories;
 	}
 
+    /**
+     * Get a category by id
+     *
+     * @param integer $id
+     * @return Category
+     */ 
+    public function getCategoryById(int $id_category)
+    {
+        $id_category = (int) $id_category;
+        $query = $this->getDB()->prepare('SELECT * FROM categories WHERE id_category = :id_category');
+        $query->bindValue('id_category', $id_category, PDO::PARAM_INT);
+        $query->execute();
+        
+		return $id_category;
+       
+	}
+
 }
