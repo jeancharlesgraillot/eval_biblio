@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 
 /**
- *  Classe permettant de gérer les opérations en base de données concernant les objets Admin
+ *  Classe permettant de gérer les opérations en base de données concernant les objets User
  */
 class UserManager
 {
@@ -89,7 +89,7 @@ class UserManager
         return $arrayOfUsers;
     }
 
-            /**
+        /**
      * Check if user exists or not and return a user object
      *
      * @param string $firstname, $lastname
@@ -110,7 +110,7 @@ class UserManager
     }
 
     	/**
-	 * Add admin to the database
+	 * Add user to the database
 	 *
 	 * @param User $user
 	 */

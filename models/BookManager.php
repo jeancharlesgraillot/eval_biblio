@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 
 /**
- *  Classe permettant de gérer les opérations en base de données concernant les objets Account
+ *  Classe permettant de gérer les opérations en base de données concernant les objets Book
  */
 class BookManager
 {
@@ -23,7 +23,7 @@ class BookManager
 	 * Set the value of $_db
 	 *
 	 * @param PDO $db
-	 * return self
+	 * @return self
 	 */
 	public function setDb(PDO $db) 
 	{
@@ -60,8 +60,9 @@ class BookManager
 	}
 
 	/**
-	 * Get all books
-	 *
+	 * Get all books from the database
+	 * 
+	 * @return array 
 	 */
 	public function getBooks()
 	{

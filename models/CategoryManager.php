@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 
 /**
- *  Classe permettant de gérer les opérations en base de données concernant les objets Account
+ *  Classe permettant de gérer les opérations en base de données concernant les objets Category
  */
 class CategoryManager
 {
@@ -68,7 +68,7 @@ class CategoryManager
      * Get a category by id
      *
      * @param integer $id
-     * @return Category
+     * @return integer
      */ 
     public function getCategoryById(int $id_category)
     {

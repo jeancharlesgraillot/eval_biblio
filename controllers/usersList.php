@@ -24,6 +24,15 @@ if (isset($_SESSION['name'])) {
     header('location: inscriptionLog.php');
 }
 
+// Connexion à la base de données
+$db = Database::DB();
+
+$userManager = new UserManager($db);
+
+$users = $userManager->getUsers();
+
+
+
 
 
 

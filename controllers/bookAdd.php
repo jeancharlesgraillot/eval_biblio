@@ -23,12 +23,11 @@ if (isset($_SESSION['name'])) {
     header('location: inscriptionLog.php');
 }
 
-//Category select
 
 // Connexion à la base de données
 $db = Database::DB();
 
-// On instancie notre manager
+// On instancie nos managers
 $categoryManager = new CategoryManager($db);
 $bookManager = new BookManager($db);
 $imageManager = new ImageManager($db);
@@ -77,6 +76,7 @@ if (isset($_POST['bookAdd']))
                 ]);
 
                 $bookManager->addBook($book);
+                header('location: index.php');
    }
 }
 

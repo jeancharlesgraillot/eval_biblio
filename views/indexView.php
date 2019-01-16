@@ -42,33 +42,6 @@
    }
    ?>
    
-      <!-- <div class="col-12 col-md-6 col-lg-3 ">
-         <div class="card mb-3 text-white bg-dark">
-            <div class="card-body">
-               <h5 class="card-title text-center mb-0">Livre 2</h5>
-            </div>
-            <img class="card-img-top" src="//placeimg.com/290/180/any" alt="Card image cap">
-         </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 ">
-         <div class="card mb-3 text-white bg-dark">
-            <div class="card-body">
-               <h5 class="card-title text-center mb-0">Livre 3</h5>
-            </div>
-            <img class="card-img-top" src="//placeimg.com/290/180/any" alt="Card image cap">
-         </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 ">
-         <div class="card mb-3 text-white bg-dark">
-            <div class="card-body">
-               <h5 class="card-title text-center mb-0">Livre 4</h5>
-            </div>
-            <img class="card-img-top" src="//placeimg.com/290/180/any" alt="Card image cap">
-         </div>
-      </div>
-   </div>
-  </div> -->
-
  <?php
    include("template/footer.php")
   ?>

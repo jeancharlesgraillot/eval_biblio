@@ -38,6 +38,9 @@ if (isset($_POST['userAdd']))
         ]);
 
         $userManager->addUser($user);
+        header('Location: usersList.php');
+        
+
     }else
     {
         $message = "Veuillez compléter tous les champs !";
