@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 
 /**
- *  Classe permettant de gérer les opérations en base de données concernant les objets Account
+ *  Classe permettant de gérer les opérations en base de données concernant les objets Book
  */
 class BookManager
 {
@@ -23,7 +23,7 @@ class BookManager
 	 * Set the value of $_db
 	 *
 	 * @param PDO $db
-	 * return self
+	 * @return self
 	 */
 	public function setDb(PDO $db) 
 	{
@@ -46,20 +46,23 @@ class BookManager
 	 *
 	 * @param Book $book
 	 */
-	public function add(Book $book)
+	public function addBook(Book $book)
 	{
-		$query = $this->getDb()->prepare('INSERT INTO books(title, author, release_date, description, disponibility) VALUES (:title, :author, :release_date, :description, :disponibility)');
+		$query = $this->getDb()->prepare('INSERT INTO books(title, author, release_date, description, disponibility, category_id, image_id) VALUES (:title, :author, :release_date, :description, :disponibility, :category_id, :image_id)');
 		$query->bindValue("title", $book->getTitle(), PDO::PARAM_STR);
         $query->bindValue("author", $book->getAuthor(), PDO::PARAM_STR);
         $query->bindValue("release_date", $book->getRelease_date(), PDO::PARAM_STR);
 		$query->bindValue("description", $book->getDescription(), PDO::PARAM_STR);
 		$query->bindValue("disponibility", $book->getDisponibility(), PDO::PARAM_INT);
+		$query->bindValue("category_id", $book->getCategory_id(), PDO::PARAM_INT);
+		$query->bindValue("image_id", $book->getImage_id(), PDO::PARAM_INT);
 		$query->execute();
 	}
 
 	/**
-	 * Get all books
-	 *
+	 * Get all books from the database
+	 * 
+	 * @return array 
 	 */
 	public function getBooks()
 	{
@@ -107,7 +110,7 @@ class BookManager
 	 *
 	 * @param Book $book
 	 */
-	public function update(Book $book)
+	public function updateBook(Book $book)
 	{
 		$query = $this->getDb()->prepare('UPDATE books SET title = :title, author = :author, release_date = :release_date, description = :description, disponibility = :disponibility WHERE id = :id');
 		$query->bindValue("title", $book->getTitle(), PDO::PARAM_STR);
@@ -122,7 +125,7 @@ class BookManager
 	 *
 	 * @param integer $id
 	 */
-	public function delete(int $id)
+	public function deleteBook(int $id)
 	{
 		$query = $this->getDb()->prepare('DELETE FROM accounts WHERE id = :id');
 		$query->bindValue("id", $id, PDO::PARAM_INT);		

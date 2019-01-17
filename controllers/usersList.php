@@ -24,6 +24,28 @@ if (isset($_SESSION['name'])) {
     header('location: inscriptionLog.php');
 }
 
+// Connexion à la base de données
+$db = Database::DB();
+
+$userManager = new UserManager($db);
+
+//Suppression d'un utilisateur
+if(isset($_POST['delete'])){
+
+	if(isset($_POST['id']) && !empty($_POST['id'])){
+
+		$id = (int) $_POST['id'];
+
+
+		$userManager->deleteUser($id);
+	}
+
+}
+
+$users = $userManager->getUsers();
+
+
+
 
 
 

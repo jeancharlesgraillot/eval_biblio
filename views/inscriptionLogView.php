@@ -3,7 +3,7 @@
  ?>   
  
  
-<p><?php echo $message ?></p>
+<p class="text-center mt-3"><?php echo $message ?></p>
 
  <div class="container">
 

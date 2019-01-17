@@ -11,6 +11,7 @@
             <p>Prénom : </p>
             <p>Nom : </p>
             <p>Identifiant : </p>
+            <p>Nombre de livre(s) emprunté(s) :</p>
         </div>
 
         <div class="booksList col-12 col-lg-6 border border-secondary">

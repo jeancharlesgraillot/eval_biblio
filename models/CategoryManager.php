@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 
 /**
- *  Classe permettant de gérer les opérations en base de données concernant les objets Account
+ *  Classe permettant de gérer les opérations en base de données concernant les objets Category
  */
 class CategoryManager
 {
@@ -62,6 +62,23 @@ class CategoryManager
 			$arrayOfCategories[] = new Category($dataCategory);
 		}
 		return $arrayOfCategories;
+	}
+
+    /**
+     * Get a category by id
+     *
+     * @param integer $id
+     * @return integer
+     */ 
+    public function getCategoryById(int $id_category)
+    {
+        $id_category = (int) $id_category;
+        $query = $this->getDB()->prepare('SELECT * FROM categories WHERE id_category = :id_category');
+        $query->bindValue('id_category', $id_category, PDO::PARAM_INT);
+        $query->execute();
+        
+		return $id_category;
+       
 	}
 
 }

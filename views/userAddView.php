@@ -16,7 +16,7 @@
             <label for="lastname">Nom :</label><br>
             <input type="text" name="lastname" value="" required>
           </p> 
-          <input type="hidden" name="tokenId" value="<?= $token ?>">     
+          <input type="hidden" name="tokenId" value="<?php echo $token; ?>">     
           <input type="submit" name="userAdd" value="Ajouter" class="btn btn-primary">
       </form>
 

@@ -68,7 +68,7 @@ class Image
      */ 
     public function getSource()
     {
-                return $this->source;
+        return $this->source;
     }
 
     /**
@@ -78,9 +78,9 @@ class Image
      */ 
     public function setSource($source)
     {
-                $this->source = $source;
+        $this->source = $source;
 
-                return $this;
+        return $this;
     }
 
     /**
@@ -88,7 +88,7 @@ class Image
      */ 
     public function getAlt()
     {
-                return $this->alt;
+        return $this->alt;
     }
 
     /**
@@ -98,8 +98,8 @@ class Image
      */ 
     public function setAlt($alt)
     {
-                $this->alt = $alt;
+        $this->alt = $alt;
 
-                return $this;
+        return $this;
     }
 }
