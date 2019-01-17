@@ -36,7 +36,7 @@
             </form>
 
             <form class="userDelete mx-auto text-center col-12 col-md-6 col-lg-3" action="usersList.php" method="post">
-                <input type="hidden" name="id" value=""  required>
+                <input type="hidden" name="id" value="<?php echo $user->getId_user(); ?>"  required>
                 <input type="submit" name="delete" value="Supprimer" class="btn btn-danger my-3">
             </form>
 

@@ -326,6 +326,7 @@ textarea {
 }
 
 /*Suppression du style des liens*/
+.card-to-anime a,
 .navbar-responsive a,
 .navbar a,
 .logo a,
