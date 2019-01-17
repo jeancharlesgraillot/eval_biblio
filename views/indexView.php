@@ -7,6 +7,7 @@
 		<input type="submit" name="add" value="Ajouter un livre" class="btn btn-primary my-3">
 	</form>
 
+
   <div class="container">
    <div class="row">
 
@@ -15,7 +16,7 @@
    {
    ?>
    
-      <div class="col-12 col-md-6 col-lg-3 ">
+      <div class="card-to-anime col-12 col-md-6 col-lg-3 ">
          <a href="bookDetails.php">
             <div class="card mb-3 text-white bg-dark">
                <div class="card-body">

@@ -9,3 +9,4 @@ $(".menu").click(function () {
   $(".navbar-responsive").toggle("slow");
 
 });
+

@@ -16,7 +16,7 @@
     foreach ($users as $user)
     {
 ?>
-<div class="container border border-secondary pt-3 mb-3">
+<div class="no-link-style container border border-secondary pt-3 mb-3">
     <a href="userDetails.php">
         <div class="row text-center">
 

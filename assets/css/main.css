@@ -310,18 +310,28 @@ textarea {
 
 /************************************************Start********************************************************/
 
-
+/*Taille de l'icône burger du menu en mobile et medium*/
 .navbar img.menu {
   width: 2.5rem;
 }
 
-
+/*Hauteur de la boîte qui contient l'image dans bookDetails*/
 .imgBox img {
   height: 250px;
 }
 
+/*Suppression du style de la liste des livres empruntés par l'utiliisateur*/
 .booksList ul {
-
   list-style: none;
-
 }
+
+/*Suppression du style des liens*/
+.navbar-responsive a,
+.navbar a,
+.logo a,
+.no-link-style a {
+  text-decoration: none;
+}
+
+
+
